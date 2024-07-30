@@ -10,7 +10,7 @@ namespace Lanchonetedalulu.Model
     {
         public static string Conectar() {
         
-            return @"C:\Users\silvio.wflorentino\source\repos\Lanchonetedalulu\Lanchonetedalulu\Dados\lanchonetebd.mdf";
+            return @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\silvio.wflorentino\source\repos\Lanchonetedalulu\Lanchonetedalulu\Dados\lanchonetebd.mdf;Integrated Security=True";
         }
     }
 }

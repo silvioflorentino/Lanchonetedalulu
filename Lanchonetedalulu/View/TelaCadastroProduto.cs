@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Lanchonetedalulu.Controller;
+using Lanchonetedalulu.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,18 @@ namespace Lanchonetedalulu.View
         public TelaCadastroProduto()
         {
             InitializeComponent();
+        }
+
+        private void btn_Salvar_Click(object sender, EventArgs e)
+        {
+            //Pegar as informações e enviar para a Model
+            Produtos.Nome_Prod = tbx_Produto.Text;
+            Produtos.Qtd_Prod = Convert.ToInt32(tbx_qtd.Text);
+            Produtos.Preco_Prod = Convert.ToInt32(tbx_Preco.Text);
+            Produtos.Tipo_Prod = cbx_Tipo.Text;
+
+            ControllerProdutos controllerProdutos = new ControllerProdutos();
+            controllerProdutos.CadastrarProdutos();
         }
     }
 }

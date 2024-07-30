@@ -16,5 +16,41 @@ namespace Lanchonetedalulu.View
         {
             InitializeComponent();
         }
+
+        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaCadastroProduto telaCadastroProduto = new TelaCadastroProduto();
+            telaCadastroProduto.Show();
+        }
+
+        private void manipularToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TelaGerenciaProduto telagerenciaProduto = new TelaGerenciaProduto();
+            telagerenciaProduto.Show();
+        }
+
+        private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaCadastrarCliente telaCadastrarCliente = new TelaCadastrarCliente();
+            telaCadastrarCliente.Show();
+        }
+
+        private void manipularToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TelaGerenciarCliente telaGerenciarCliente = new TelaGerenciarCliente();
+            telaGerenciarCliente.Show();
+        }
+
+        private void cadastrarToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            TelaCadastrarFuncionario telaCadastrarFuncionario = new TelaCadastrarFuncionario();
+            telaCadastrarFuncionario.Show();
+        }
+
+        private void manipularToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            TelaGerenciarFuncionario telaGerenciarFuncionario = new TelaGerenciarFuncionario();
+            telaGerenciarFuncionario.Show();
+        }
     }
 }

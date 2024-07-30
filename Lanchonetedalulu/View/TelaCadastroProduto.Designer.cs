@@ -32,12 +32,12 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            button1 = new Button();
+            tbx_Produto = new TextBox();
+            tbx_qtd = new TextBox();
+            tbx_Preco = new TextBox();
+            btn_Salvar = new Button();
             label6 = new Label();
-            comboBox1 = new ComboBox();
+            cbx_Tipo = new ComboBox();
             SuspendLayout();
             // 
             // label1
@@ -80,38 +80,39 @@
             label4.TabIndex = 3;
             label4.Text = "Preço:";
             // 
-            // textBox1
+            // tbx_Produto
             // 
-            textBox1.Font = new Font("Segoe UI", 14.25F);
-            textBox1.Location = new Point(147, 87);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(262, 33);
-            textBox1.TabIndex = 4;
+            tbx_Produto.Font = new Font("Segoe UI", 14.25F);
+            tbx_Produto.Location = new Point(147, 87);
+            tbx_Produto.Name = "tbx_Produto";
+            tbx_Produto.Size = new Size(262, 33);
+            tbx_Produto.TabIndex = 4;
             // 
-            // textBox2
+            // tbx_qtd
             // 
-            textBox2.Font = new Font("Segoe UI", 14.25F);
-            textBox2.Location = new Point(147, 131);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(85, 33);
-            textBox2.TabIndex = 5;
+            tbx_qtd.Font = new Font("Segoe UI", 14.25F);
+            tbx_qtd.Location = new Point(147, 131);
+            tbx_qtd.Name = "tbx_qtd";
+            tbx_qtd.Size = new Size(85, 33);
+            tbx_qtd.TabIndex = 5;
             // 
-            // textBox3
+            // tbx_Preco
             // 
-            textBox3.Font = new Font("Segoe UI", 14.25F);
-            textBox3.Location = new Point(147, 178);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(144, 33);
-            textBox3.TabIndex = 6;
+            tbx_Preco.Font = new Font("Segoe UI", 14.25F);
+            tbx_Preco.Location = new Point(147, 178);
+            tbx_Preco.Name = "tbx_Preco";
+            tbx_Preco.Size = new Size(144, 33);
+            tbx_Preco.TabIndex = 6;
             // 
-            // button1
+            // btn_Salvar
             // 
-            button1.Location = new Point(40, 289);
-            button1.Name = "button1";
-            button1.Size = new Size(379, 68);
-            button1.TabIndex = 7;
-            button1.Text = "Salvar";
-            button1.UseVisualStyleBackColor = true;
+            btn_Salvar.Location = new Point(40, 289);
+            btn_Salvar.Name = "btn_Salvar";
+            btn_Salvar.Size = new Size(379, 68);
+            btn_Salvar.TabIndex = 7;
+            btn_Salvar.Text = "Salvar";
+            btn_Salvar.UseVisualStyleBackColor = true;
+            btn_Salvar.Click += btn_Salvar_Click;
             // 
             // label6
             // 
@@ -123,15 +124,15 @@
             label6.TabIndex = 9;
             label6.Text = "Tipo:";
             // 
-            // comboBox1
+            // cbx_Tipo
             // 
-            comboBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Lanche", "Bebida" });
-            comboBox1.Location = new Point(147, 231);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 33);
-            comboBox1.TabIndex = 10;
+            cbx_Tipo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cbx_Tipo.FormattingEnabled = true;
+            cbx_Tipo.Items.AddRange(new object[] { "Lanche", "Bebida" });
+            cbx_Tipo.Location = new Point(147, 231);
+            cbx_Tipo.Name = "cbx_Tipo";
+            cbx_Tipo.Size = new Size(121, 33);
+            cbx_Tipo.TabIndex = 10;
             // 
             // TelaCadastroProduto
             // 
@@ -139,12 +140,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             ClientSize = new Size(453, 369);
-            Controls.Add(comboBox1);
+            Controls.Add(cbx_Tipo);
             Controls.Add(label6);
-            Controls.Add(button1);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(btn_Salvar);
+            Controls.Add(tbx_Preco);
+            Controls.Add(tbx_qtd);
+            Controls.Add(tbx_Produto);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -164,11 +165,11 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private Button button1;
+        private TextBox tbx_Produto;
+        private TextBox tbx_qtd;
+        private TextBox tbx_Preco;
+        private Button btn_Salvar;
         private Label label6;
-        private ComboBox comboBox1;
+        private ComboBox cbx_Tipo;
     }
 }

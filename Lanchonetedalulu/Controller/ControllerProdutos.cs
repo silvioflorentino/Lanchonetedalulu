@@ -19,6 +19,7 @@ namespace Lanchonetedalulu.Controller
           
             try
             {
+                cmd.Parameters.AddWithValue("@codigo", Produtos.Id_Prod);
                 cmd.Parameters.AddWithValue("@nome", Produtos.Nome_Prod);
                 cmd.Parameters.AddWithValue("@qtd", Produtos.Qtd_Prod);
                 cmd.Parameters.AddWithValue("@preco", Produtos.Preco_Prod);
@@ -54,10 +55,7 @@ namespace Lanchonetedalulu.Controller
                 throw;
             }
         }
-        public void VisualizarTudoProdutos()
-        {
 
-        }
         public void VisualizarCodigoProdutos()
         {
             SqlConnection cn = new SqlConnection(Conexao.Conectar());
