@@ -52,5 +52,16 @@ namespace Lanchonetedalulu.View
             TelaGerenciarFuncionario telaGerenciarFuncionario = new TelaGerenciarFuncionario();
             telaGerenciarFuncionario.Show();
         }
+
+        private void pDVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void pDVToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            TelaPDV telaPDV = new TelaPDV();
+            telaPDV.Show();
+        }
     }
 }
