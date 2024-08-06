@@ -30,33 +30,33 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            dataGridView1 = new DataGridView();
+            dataGridViewClientes = new DataGridView();
             Código = new DataGridViewTextBoxColumn();
             Cliente = new DataGridViewTextBoxColumn();
             Fone = new DataGridViewTextBoxColumn();
             CPF = new DataGridViewTextBoxColumn();
-            button1 = new Button();
-            textBox1 = new TextBox();
+            btn_BuscarCliente = new Button();
+            tbx_NomeCliente = new TextBox();
             label2 = new Label();
             tabPage2 = new TabPage();
             groupBox1 = new GroupBox();
-            button4 = new Button();
-            button3 = new Button();
+            btn_ExcluirCliente = new Button();
+            btn_AlterarCliente = new Button();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
-            textBox6 = new TextBox();
+            tbx_CPFClienteVer = new TextBox();
             label7 = new Label();
-            textBox5 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            button2 = new Button();
-            textBox2 = new TextBox();
+            tbx_FoneClienteVer = new TextBox();
+            tbx_CodigoClienteVer = new TextBox();
+            tbx_NomeClienteVer = new TextBox();
+            btn_BuscarClienteCodigo = new Button();
+            tbx_CodigoCliente = new TextBox();
             label3 = new Label();
             label1 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).BeginInit();
             tabPage2.SuspendLayout();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -73,9 +73,9 @@
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(dataGridView1);
-            tabPage1.Controls.Add(button1);
-            tabPage1.Controls.Add(textBox1);
+            tabPage1.Controls.Add(dataGridViewClientes);
+            tabPage1.Controls.Add(btn_BuscarCliente);
+            tabPage1.Controls.Add(tbx_NomeCliente);
             tabPage1.Controls.Add(label2);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
@@ -85,14 +85,14 @@
             tabPage1.Text = "Pesquisar";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewClientes
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Código, Cliente, Fone, CPF });
-            dataGridView1.Location = new Point(38, 111);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(572, 150);
-            dataGridView1.TabIndex = 3;
+            dataGridViewClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewClientes.Columns.AddRange(new DataGridViewColumn[] { Código, Cliente, Fone, CPF });
+            dataGridViewClientes.Location = new Point(38, 111);
+            dataGridViewClientes.Name = "dataGridViewClientes";
+            dataGridViewClientes.Size = new Size(572, 150);
+            dataGridViewClientes.TabIndex = 3;
             // 
             // Código
             // 
@@ -114,22 +114,22 @@
             CPF.HeaderText = "CPF";
             CPF.Name = "CPF";
             // 
-            // button1
+            // btn_BuscarCliente
             // 
-            button1.Location = new Point(38, 70);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Buscar";
-            button1.UseVisualStyleBackColor = true;
+            btn_BuscarCliente.Location = new Point(38, 70);
+            btn_BuscarCliente.Name = "btn_BuscarCliente";
+            btn_BuscarCliente.Size = new Size(75, 23);
+            btn_BuscarCliente.TabIndex = 2;
+            btn_BuscarCliente.Text = "Buscar";
+            btn_BuscarCliente.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tbx_NomeCliente
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(38, 38);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(463, 29);
-            textBox1.TabIndex = 1;
+            tbx_NomeCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbx_NomeCliente.Location = new Point(38, 38);
+            tbx_NomeCliente.Name = "tbx_NomeCliente";
+            tbx_NomeCliente.Size = new Size(463, 29);
+            tbx_NomeCliente.TabIndex = 1;
             // 
             // label2
             // 
@@ -143,8 +143,8 @@
             // tabPage2
             // 
             tabPage2.Controls.Add(groupBox1);
-            tabPage2.Controls.Add(button2);
-            tabPage2.Controls.Add(textBox2);
+            tabPage2.Controls.Add(btn_BuscarClienteCodigo);
+            tabPage2.Controls.Add(tbx_CodigoCliente);
             tabPage2.Controls.Add(label3);
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
@@ -156,16 +156,16 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(button4);
-            groupBox1.Controls.Add(button3);
+            groupBox1.Controls.Add(btn_ExcluirCliente);
+            groupBox1.Controls.Add(btn_AlterarCliente);
             groupBox1.Controls.Add(label4);
             groupBox1.Controls.Add(label5);
             groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(textBox6);
+            groupBox1.Controls.Add(tbx_CPFClienteVer);
             groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(textBox5);
-            groupBox1.Controls.Add(textBox3);
-            groupBox1.Controls.Add(textBox4);
+            groupBox1.Controls.Add(tbx_FoneClienteVer);
+            groupBox1.Controls.Add(tbx_CodigoClienteVer);
+            groupBox1.Controls.Add(tbx_NomeClienteVer);
             groupBox1.Location = new Point(17, 63);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(629, 232);
@@ -173,23 +173,25 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Resultado da Pesquisa:";
             // 
-            // button4
+            // btn_ExcluirCliente
             // 
-            button4.Location = new Point(524, 190);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 17;
-            button4.Text = "Excluir";
-            button4.UseVisualStyleBackColor = true;
+            btn_ExcluirCliente.Location = new Point(524, 190);
+            btn_ExcluirCliente.Name = "btn_ExcluirCliente";
+            btn_ExcluirCliente.Size = new Size(75, 23);
+            btn_ExcluirCliente.TabIndex = 17;
+            btn_ExcluirCliente.Text = "Excluir";
+            btn_ExcluirCliente.UseVisualStyleBackColor = true;
+            btn_ExcluirCliente.Click += btn_ExcluirCliente_Click;
             // 
-            // button3
+            // btn_AlterarCliente
             // 
-            button3.Location = new Point(443, 190);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 16;
-            button3.Text = "Alterar";
-            button3.UseVisualStyleBackColor = true;
+            btn_AlterarCliente.Location = new Point(443, 190);
+            btn_AlterarCliente.Name = "btn_AlterarCliente";
+            btn_AlterarCliente.Size = new Size(75, 23);
+            btn_AlterarCliente.TabIndex = 16;
+            btn_AlterarCliente.Text = "Alterar";
+            btn_AlterarCliente.UseVisualStyleBackColor = true;
+            btn_AlterarCliente.Click += btn_AlterarCliente_Click;
             // 
             // label4
             // 
@@ -221,13 +223,13 @@
             label6.TabIndex = 8;
             label6.Text = "Fone:";
             // 
-            // textBox6
+            // tbx_CPFClienteVer
             // 
-            textBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            textBox6.Location = new Point(339, 130);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(191, 33);
-            textBox6.TabIndex = 13;
+            tbx_CPFClienteVer.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            tbx_CPFClienteVer.Location = new Point(339, 130);
+            tbx_CPFClienteVer.Name = "tbx_CPFClienteVer";
+            tbx_CPFClienteVer.Size = new Size(191, 33);
+            tbx_CPFClienteVer.TabIndex = 13;
             // 
             // label7
             // 
@@ -239,46 +241,47 @@
             label7.TabIndex = 9;
             label7.Text = "CPF:";
             // 
-            // textBox5
+            // tbx_FoneClienteVer
             // 
-            textBox5.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            textBox5.Location = new Point(123, 133);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(163, 33);
-            textBox5.TabIndex = 12;
+            tbx_FoneClienteVer.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            tbx_FoneClienteVer.Location = new Point(123, 133);
+            tbx_FoneClienteVer.Name = "tbx_FoneClienteVer";
+            tbx_FoneClienteVer.Size = new Size(163, 33);
+            tbx_FoneClienteVer.TabIndex = 12;
             // 
-            // textBox3
+            // tbx_CodigoClienteVer
             // 
-            textBox3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            textBox3.Location = new Point(123, 36);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(97, 33);
-            textBox3.TabIndex = 10;
+            tbx_CodigoClienteVer.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            tbx_CodigoClienteVer.Location = new Point(123, 36);
+            tbx_CodigoClienteVer.Name = "tbx_CodigoClienteVer";
+            tbx_CodigoClienteVer.Size = new Size(97, 33);
+            tbx_CodigoClienteVer.TabIndex = 10;
             // 
-            // textBox4
+            // tbx_NomeClienteVer
             // 
-            textBox4.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            textBox4.Location = new Point(123, 85);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(407, 33);
-            textBox4.TabIndex = 11;
+            tbx_NomeClienteVer.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            tbx_NomeClienteVer.Location = new Point(123, 85);
+            tbx_NomeClienteVer.Name = "tbx_NomeClienteVer";
+            tbx_NomeClienteVer.Size = new Size(407, 33);
+            tbx_NomeClienteVer.TabIndex = 11;
             // 
-            // button2
+            // btn_BuscarClienteCodigo
             // 
-            button2.Location = new Point(390, 31);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 5;
-            button2.Text = "Buscar";
-            button2.UseVisualStyleBackColor = true;
+            btn_BuscarClienteCodigo.Location = new Point(390, 31);
+            btn_BuscarClienteCodigo.Name = "btn_BuscarClienteCodigo";
+            btn_BuscarClienteCodigo.Size = new Size(75, 23);
+            btn_BuscarClienteCodigo.TabIndex = 5;
+            btn_BuscarClienteCodigo.Text = "Buscar";
+            btn_BuscarClienteCodigo.UseVisualStyleBackColor = true;
+            btn_BuscarClienteCodigo.Click += btn_BuscarClienteCodigo_Click;
             // 
-            // textBox2
+            // tbx_CodigoCliente
             // 
-            textBox2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(243, 28);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(139, 29);
-            textBox2.TabIndex = 4;
+            tbx_CodigoCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbx_CodigoCliente.Location = new Point(243, 28);
+            tbx_CodigoCliente.Name = "tbx_CodigoCliente";
+            tbx_CodigoCliente.Size = new Size(139, 29);
+            tbx_CodigoCliente.TabIndex = 4;
             // 
             // label3
             // 
@@ -316,7 +319,7 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewClientes).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -329,24 +332,24 @@
 
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private DataGridView dataGridView1;
-        private Button button1;
-        private TextBox textBox1;
+        private DataGridView dataGridViewClientes;
+        private Button btn_BuscarCliente;
+        private TextBox tbx_NomeCliente;
         private Label label2;
         private TabPage tabPage2;
         private GroupBox groupBox1;
-        private Button button4;
-        private Button button3;
+        private Button btn_ExcluirCliente;
+        private Button btn_AlterarCliente;
         private Label label4;
         private Label label5;
         private Label label6;
-        private TextBox textBox6;
+        private TextBox tbx_CPFClienteVer;
         private Label label7;
-        private TextBox textBox5;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private Button button2;
-        private TextBox textBox2;
+        private TextBox tbx_FoneClienteVer;
+        private TextBox tbx_CodigoClienteVer;
+        private TextBox tbx_NomeClienteVer;
+        private Button btn_BuscarClienteCodigo;
+        private TextBox tbx_CodigoCliente;
         private Label label3;
         private Label label1;
         private DataGridViewTextBoxColumn Código;

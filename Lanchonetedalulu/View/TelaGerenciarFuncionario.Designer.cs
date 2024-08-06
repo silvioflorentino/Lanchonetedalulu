@@ -31,11 +31,16 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             dataGridView1 = new DataGridView();
+            Código = new DataGridViewTextBoxColumn();
+            Nome = new DataGridViewTextBoxColumn();
+            Fone = new DataGridViewTextBoxColumn();
+            Email = new DataGridViewTextBoxColumn();
             button1 = new Button();
             textBox1 = new TextBox();
             label2 = new Label();
             tabPage2 = new TabPage();
             groupBox1 = new GroupBox();
+            textBox6 = new TextBox();
             button4 = new Button();
             button3 = new Button();
             label4 = new Label();
@@ -49,11 +54,6 @@
             textBox2 = new TextBox();
             label3 = new Label();
             label1 = new Label();
-            Código = new DataGridViewTextBoxColumn();
-            Nome = new DataGridViewTextBoxColumn();
-            Fone = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
-            textBox6 = new TextBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -93,6 +93,26 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(539, 150);
             dataGridView1.TabIndex = 3;
+            // 
+            // Código
+            // 
+            Código.HeaderText = "Código";
+            Código.Name = "Código";
+            // 
+            // Nome
+            // 
+            Nome.HeaderText = "Nome";
+            Nome.Name = "Nome";
+            // 
+            // Fone
+            // 
+            Fone.HeaderText = "Fone";
+            Fone.Name = "Fone";
+            // 
+            // Email
+            // 
+            Email.HeaderText = "E-mail";
+            Email.Name = "Email";
             // 
             // button1
             // 
@@ -153,6 +173,14 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Resultado da Pesquisa:";
             // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
+            textBox6.Location = new Point(444, 87);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(115, 33);
+            textBox6.TabIndex = 18;
+            // 
             // button4
             // 
             button4.Location = new Point(524, 190);
@@ -170,6 +198,7 @@
             button3.TabIndex = 16;
             button3.Text = "Alterar";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // label4
             // 
@@ -271,34 +300,6 @@
             label1.Size = new Size(277, 30);
             label1.TabIndex = 3;
             label1.Text = "Manipulando Funcionários";
-            // 
-            // Código
-            // 
-            Código.HeaderText = "Código";
-            Código.Name = "Código";
-            // 
-            // Nome
-            // 
-            Nome.HeaderText = "Nome";
-            Nome.Name = "Nome";
-            // 
-            // Fone
-            // 
-            Fone.HeaderText = "Fone";
-            Fone.Name = "Fone";
-            // 
-            // Email
-            // 
-            Email.HeaderText = "E-mail";
-            Email.Name = "Email";
-            // 
-            // textBox6
-            // 
-            textBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold);
-            textBox6.Location = new Point(444, 87);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(115, 33);
-            textBox6.TabIndex = 18;
             // 
             // TelaGerenciarFuncionario
             // 
