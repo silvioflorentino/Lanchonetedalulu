@@ -41,9 +41,9 @@ namespace Lanchonetedalulu.View
             else
             {
                 var resposta = MessageBox.Show("Deseja alterar as informações do cliente: " +
-                    tbx_NomeClienteVer.Text + " ? ","Atenção", MessageBoxButtons.YesNo, 
+                    tbx_NomeClienteVer.Text + " ? ", "Atenção", MessageBoxButtons.YesNo,
                     MessageBoxIcon.Stop);
-                
+
                 if (resposta == DialogResult.Yes)
                 {
                     Clientes.Id_Cli = Convert.ToInt32(tbx_CodigoCliente.Text);
@@ -110,6 +110,21 @@ namespace Lanchonetedalulu.View
                 }
 
             }
+        }
+
+        private void btn_BuscarCliente_Click(object sender, EventArgs e)
+        {
+            Clientes.Nome_Cli = tbx_NomeCliente.Text;
+            dataGridViewClientes.DataSource = ControllerClientes.VisualizarNomeCliente();
+            dataGridViewClientes.Columns[0].Visible = false;
+            dataGridViewClientes.Columns[1].Visible = false;
+            dataGridViewClientes.Columns[2].Visible = false;
+            dataGridViewClientes.Columns[3].Visible = false;
+            dataGridViewClientes.Columns[4].HeaderCell.Value = "Código";
+            dataGridViewClientes.Columns[5].HeaderCell.Value = "Cliente";
+            dataGridViewClientes.Columns[6].HeaderCell.Value = "Fone";
+            dataGridViewClientes.Columns[7].HeaderCell.Value = "CPF";
+            //dataGridViewClientes.Columns[7].Visible = false;
         }
     }
 }

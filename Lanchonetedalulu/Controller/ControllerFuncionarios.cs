@@ -1,6 +1,7 @@
 ﻿using Lanchonetedalulu.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -112,6 +113,28 @@ namespace Lanchonetedalulu.Controller
 
                 throw;
             }
+        }
+
+        public static BindingSource VisualizarNomeFuncionarios()
+        {
+            SqlConnection cn = new SqlConnection(Conexao.Conectar());
+            SqlCommand cmd = new SqlCommand("PVisualizarTudoFuncionario", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@NomeFuncionario", Funcionarios.Nome_Fun);
+            cn.Open();
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
+
+            DataTable table = new DataTable();
+
+            sqlData.Fill(table);
+
+            BindingSource dados = new BindingSource();
+            dados.DataSource = table;
+
+            return dados;
         }
     }
 }

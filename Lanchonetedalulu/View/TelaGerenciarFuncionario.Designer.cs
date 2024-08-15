@@ -30,13 +30,13 @@
         {
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            dataGridView1 = new DataGridView();
+            dataGridViewFuncionario = new DataGridView();
             Código = new DataGridViewTextBoxColumn();
             Nome = new DataGridViewTextBoxColumn();
             Fone = new DataGridViewTextBoxColumn();
             Email = new DataGridViewTextBoxColumn();
-            button1 = new Button();
-            textBox1 = new TextBox();
+            btnBuscar = new Button();
+            tbxNomeFuncionario = new TextBox();
             label2 = new Label();
             tabPage2 = new TabPage();
             groupBox1 = new GroupBox();
@@ -56,7 +56,7 @@
             label1 = new Label();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewFuncionario).BeginInit();
             tabPage2.SuspendLayout();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -73,9 +73,9 @@
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(dataGridView1);
-            tabPage1.Controls.Add(button1);
-            tabPage1.Controls.Add(textBox1);
+            tabPage1.Controls.Add(dataGridViewFuncionario);
+            tabPage1.Controls.Add(btnBuscar);
+            tabPage1.Controls.Add(tbxNomeFuncionario);
             tabPage1.Controls.Add(label2);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
@@ -85,14 +85,14 @@
             tabPage1.Text = "Pesquisar";
             tabPage1.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataGridViewFuncionario
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Código, Nome, Fone, Email });
-            dataGridView1.Location = new Point(38, 111);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(539, 150);
-            dataGridView1.TabIndex = 3;
+            dataGridViewFuncionario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewFuncionario.Columns.AddRange(new DataGridViewColumn[] { Código, Nome, Fone, Email });
+            dataGridViewFuncionario.Location = new Point(38, 111);
+            dataGridViewFuncionario.Name = "dataGridViewFuncionario";
+            dataGridViewFuncionario.Size = new Size(539, 150);
+            dataGridViewFuncionario.TabIndex = 3;
             // 
             // Código
             // 
@@ -114,22 +114,23 @@
             Email.HeaderText = "E-mail";
             Email.Name = "Email";
             // 
-            // button1
+            // btnBuscar
             // 
-            button1.Location = new Point(38, 70);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 2;
-            button1.Text = "Buscar";
-            button1.UseVisualStyleBackColor = true;
+            btnBuscar.Location = new Point(38, 70);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(75, 23);
+            btnBuscar.TabIndex = 2;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
-            // textBox1
+            // tbxNomeFuncionario
             // 
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(38, 38);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(463, 29);
-            textBox1.TabIndex = 1;
+            tbxNomeFuncionario.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbxNomeFuncionario.Location = new Point(38, 38);
+            tbxNomeFuncionario.Name = "tbxNomeFuncionario";
+            tbxNomeFuncionario.Size = new Size(463, 29);
+            tbxNomeFuncionario.TabIndex = 1;
             // 
             // label2
             // 
@@ -317,7 +318,7 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewFuncionario).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             groupBox1.ResumeLayout(false);
@@ -330,9 +331,9 @@
 
         private TabControl tabControl1;
         private TabPage tabPage1;
-        private DataGridView dataGridView1;
-        private Button button1;
-        private TextBox textBox1;
+        private DataGridView dataGridViewFuncionario;
+        private Button btnBuscar;
+        private TextBox tbxNomeFuncionario;
         private Label label2;
         private TabPage tabPage2;
         private GroupBox groupBox1;

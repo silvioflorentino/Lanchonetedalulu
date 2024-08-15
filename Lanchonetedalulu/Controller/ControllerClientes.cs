@@ -1,6 +1,7 @@
 ﻿using Lanchonetedalulu.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -112,6 +113,28 @@ namespace Lanchonetedalulu.Controller
 
                 throw;
             }
+        }
+
+        public static BindingSource VisualizarNomeCliente()
+        {
+            SqlConnection cn = new SqlConnection(Conexao.Conectar());
+            SqlCommand cmd = new SqlCommand("PVisualizarTudoClientes", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@nomeCliente", Clientes.Nome_Cli);
+            cn.Open();
+            cmd.ExecuteNonQuery();
+
+            SqlDataAdapter sqlData = new SqlDataAdapter(cmd);
+
+            DataTable table = new DataTable();
+
+            sqlData.Fill(table);
+
+            BindingSource dados = new BindingSource();
+            dados.DataSource = table;
+
+            return dados;
         }
     }
 }

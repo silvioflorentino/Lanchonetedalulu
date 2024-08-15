@@ -122,6 +122,7 @@
             btn_BuscarCliente.TabIndex = 2;
             btn_BuscarCliente.Text = "Buscar";
             btn_BuscarCliente.UseVisualStyleBackColor = true;
+            btn_BuscarCliente.Click += btn_BuscarCliente_Click;
             // 
             // tbx_NomeCliente
             // 
